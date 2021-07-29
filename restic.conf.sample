@@ -1,0 +1,4 @@
+#!/bin/bash
+export MYSQL_PW='PASSWORD'
+export RESTIC_PASSWORD='PASSWORD'
+export BUCKET_URL='/mnt/bak/nextcloud'
