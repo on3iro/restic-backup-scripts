@@ -6,7 +6,9 @@ echo "Timestamp `date`"
 
 set -o pipefail
 
-source restic.conf
+BASEDIR=$(dirname $0)
+
+source "$BASEDIR/restic.conf"
 
 restic -r $BUCKET_URL snapshots
 

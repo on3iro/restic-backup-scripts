@@ -3,6 +3,8 @@
 echo "Checking nextcloud local repo integrity..."
 echo "Timestamp: `date`"
 
-source ./restic.conf
+BASEDIR=$(dirname $0)
+
+source "$BASEDIR/restic.conf"
 
 restic -r $BUCKET_URL check

@@ -6,7 +6,9 @@ echo "Timestamp: `date`"
 
 set -o pipefail
 
-source restic.conf
+BASEDIR=$(dirname $0)
+
+source "$BASEDIR/restic.conf"
 
 echo "Enable maintenance mode...\n"
 docker exec --user www-data nextcloud_app_1 php occ maintenance:mode --on
